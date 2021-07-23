@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react"
 import * as tt from "@tomtom-international/web-sdk-maps"
 import * as ttapi from "@tomtom-international/web-sdk-services"
 import "@tomtom-international/web-sdk-maps/dist/maps.css"
+import ApiKey from './apiKey'
 
 export default function App() {
   const mapElement = useRef()
@@ -55,7 +56,7 @@ export default function App() {
     const destinations = []
 
     let map = tt.map({
-      key: "084sx3A8BcPp9u7sKVPWTBRn2cRcpwtB",
+      key: ApiKey,
       container: mapElement.current,
       stylesVisibility: {
         trafficIncidents: true,
@@ -98,7 +99,7 @@ export default function App() {
         return convertToPoints(destination)
       })
       const callParameters = {
-        key: "084sx3A8BcPp9u7sKVPWTBRn2cRcpwtB",
+        key: ApiKey,
         destinations: pointsForDestinations,
         origins: [convertToPoints(origin)],
       }
@@ -129,7 +130,7 @@ export default function App() {
 
         ttapi.services
           .calculateRoute({
-            key: "084sx3A8BcPp9u7sKVPWTBRn2cRcpwtB",
+            key: ApiKey,
             locations: sorted,
           })
           .then(routeData => {

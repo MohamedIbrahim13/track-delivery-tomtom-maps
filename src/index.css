@@ -2,7 +2,7 @@ body {
   padding:0;
   margin:0;
   height:100vh;
-  width:100vw;
+  width:100%;
 }
 
 .app {
@@ -11,7 +11,7 @@ body {
   margin:0 auto;
 }
 .map {
-  height: 85%;
+  height: 75%;
   width: 100%;
 }
 

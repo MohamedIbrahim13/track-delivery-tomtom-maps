@@ -1,11 +1,13 @@
 body {
   padding:0;
   margin:0;
+  height:100vh;
+  width:100vw;
 }
 
 .app {
-  height: 800px;
-  width: 95vh;
+  height: 100%;
+  width: 95%;
   margin:0 auto;
 }
 .map {

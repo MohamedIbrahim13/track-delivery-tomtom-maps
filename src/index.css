@@ -5,10 +5,11 @@ body {
 
 .app {
   height: 800px;
-  width: 100vh;
+  width: 95vh;
+  margin:0 auto;
 }
 .map {
-  height: 70%;
+  height: 85%;
   width: 100%;
 }
 
